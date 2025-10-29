@@ -542,6 +542,26 @@ async def on_message(message):
             await message.channel.send(f"🤖 Bot nối từ: **{bot_word}**")
         else:
             await message.channel.send(f"❌ **{author_name}**, '{content}' không có trong từ điển.")
+import subprocess
+import datetime
+
+def push_to_github():
+    try:
+        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        subprocess.run(["git", "config", "--global", "user.email", "bot@render.com"])
+        subprocess.run(["git", "config", "--global", "user.name", "Render Bot"])
+        subprocess.run(["git", "add", "save.txt"])
+        subprocess.run(["git", "commit", "-m", f"Auto save at {now}"])
+        subprocess.run(["git", "push", "https://$GITHUB_USER:$GITHUB_TOKEN@github.com/hihi934/Bot.py.git", "main"])
+        print("✅ Saved to GitHub successfully!")
+    except Exception as e:
+        print(f"⚠️ Save to GitHub failed: {e}")
+
+# Gọi hàm mỗi khi lưu dữ liệu
+def save_data():
+    with open(SAVE_PATH,'w',encoding='utf-8') as f:
+        json.dump(players,f,ensure_ascii=False,indent=2)
+    push_to_github()
 
 # -------------------- RUN BOT --------------------
 if BOT_TOKEN:
