@@ -1,0 +1,32 @@
+{
+  "1189165612954550302": {
+    "pocket": "0E+21",
+    "exp": 2,
+    "level": 1,
+    "combo": 0,
+    "inventory": {},
+    "hunger": 0,
+    "thirst": 0,
+    "last_status_ts": 1761564849
+  },
+  "1335554610210799639": {
+    "pocket": "1.000000000000000000001001000E+48",
+    "exp": 2,
+    "level": 1,
+    "combo": 0,
+    "inventory": {},
+    "hunger": 0,
+    "thirst": 0,
+    "last_status_ts": 1761564849
+  },
+  "1428756870809518212": {
+    "pocket": "999999999999999999999999",
+    "exp": 0,
+    "level": 1,
+    "combo": 0,
+    "inventory": {},
+    "hunger": 5,
+    "thirst": 5,
+    "last_status_ts": 1761567230
+  }
+}
