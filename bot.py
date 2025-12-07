@@ -24,7 +24,7 @@ ENERGY_MAX = 5
 
 # -------------------- TOKEN BOT --------------------
 load_dotenv()
-BOT_TOKEN = os.getenv("BOT_TOKEN")  # Điền token vào đây
+BOT_TOKEN = os.getenv("hi.exe")  # Điền token vào đây
 
 # -------------------- LOAD TỪ ĐIỂN --------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -568,5 +568,6 @@ if BOT_TOKEN:
     bot.run(BOT_TOKEN)
 else:
     print("⚠️ BOT_TOKEN chưa được cài đặt.")
+
 
 
