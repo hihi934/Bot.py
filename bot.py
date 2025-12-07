@@ -24,7 +24,11 @@ ENERGY_MAX = 5
 
 # -------------------- TOKEN BOT --------------------
 load_dotenv()
-BOT_TOKEN = os.getenv("hi.exe")  # Điền token vào đây
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+GITHUB_USER = os.environ.get("GITHUB_USER")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
+  # Điền token vào đây
 
 # -------------------- LOAD TỪ ĐIỂN --------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -568,6 +572,7 @@ if BOT_TOKEN:
     bot.run(BOT_TOKEN)
 else:
     print("⚠️ BOT_TOKEN chưa được cài đặt.")
+
 
 
 
